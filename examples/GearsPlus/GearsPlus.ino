@@ -119,6 +119,10 @@ static void anim(lv_timer_t * timer) {
   Arduino_H7_Video display(720, 480, USBCVideo);
 #endif
 
+#if (LVGL_VERSION_MAJOR == 9)
+#define  LV_IMG_CF_TRUE_COLOR LV_COLOR_FORMAT_RGB565
+#endif
+
 void setup() {
   Serial.begin(115200);
   //while (!Serial);

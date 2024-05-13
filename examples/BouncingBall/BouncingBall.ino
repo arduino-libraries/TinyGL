@@ -381,6 +381,9 @@ void idle( void )
   draw();
 }
 
+#if (LVGL_VERSION_MAJOR == 9)
+#define  LV_IMG_CF_TRUE_COLOR LV_COLOR_FORMAT_RGB565
+#endif
 
 void init_ball(void)
 {
